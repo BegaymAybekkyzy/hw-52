@@ -15,8 +15,8 @@ const cardSuits = {
 const Card: React.FC<Props> = ({rank, suit}) => {
   return (
     <span className={`card rank-${rank.toLowerCase()} ${suit}`}>
-      <span className={rank.toLowerCase()}>{rank}</span>
-      <span className={suit}>{cardSuits[suit]}</span>
+      <span className="rank">{rank}</span>
+      <span className="suit">{cardSuits[suit]}</span>
     </span>
   );
 };
