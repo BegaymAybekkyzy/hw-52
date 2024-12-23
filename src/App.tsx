@@ -1,9 +1,9 @@
-import './App.css';
-import Card from './components/Card/Card';
-import CardDeck from './lib/CardDeck';
-import { useState } from 'react';
-import { ICard } from './types';
-import PokerHand from './lib/PokerHand';
+import "./App.css";
+import Card from "./components/Card/Card";
+import CardDeck from "./lib/CardDeck";
+import { useState } from "react";
+import { ICard } from "./types";
+import PokerHand from "./lib/PokerHand";
 
 const App = () => {
   const [hand, setHand] = useState<ICard[]>([]);
@@ -39,7 +39,7 @@ const App = () => {
         </div>
         <div className="playingCards faceImages">
           {hand.map((card, index) => (
-            <Card key={index} rank={card.rank} suit={card.suit}/>
+            <Card key={index} rank={card.rank} suit={card.suit} />
           ))}
         </div>
 
@@ -47,7 +47,6 @@ const App = () => {
       </>
     );
   }
-
 };
 
 export default App;

@@ -1,4 +1,4 @@
 export interface ICard {
   rank: string;
-  suit: 'diams' | 'hearts' | 'clubs' | 'spades';
+  suit: "diams" | "hearts" | "clubs" | "spades";
 }
