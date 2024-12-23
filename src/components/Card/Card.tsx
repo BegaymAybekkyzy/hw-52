@@ -1,18 +1,11 @@
 import React from 'react';
 
-interface ICardSuit {
-  diams: string;
-  hearts: string;
-  clubs: string;
-  spades: string;
-}
-
 interface Props {
   rank: string;
-  suit: keyof ICardSuit;
+  suit:'diams' | 'hearts' | 'clubs' | 'spades';
 }
 
-const cardSuits: ICardSuit = {
+const cardSuits = {
   diams: '♦',
   hearts: '♥',
   clubs: '♣',
@@ -21,8 +14,8 @@ const cardSuits: ICardSuit = {
 
 const Card: React.FC<Props> = ({rank, suit}) => {
   return (
-    <span className={`card rank-${rank} ${suit}`}>
-      <span className={rank}>K</span>
+    <span className={`card rank-${rank.toLowerCase()} ${suit}`}>
+      <span className={rank.toLowerCase()}>{rank}</span>
       <span className={suit}>{cardSuits[suit]}</span>
     </span>
   );

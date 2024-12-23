@@ -22,11 +22,11 @@ class CardDeck {
   }
 
   getCards(howMany:number): Card[] {
+    const cards: Card[] = [];
     for(let i = 0; i < howMany; i++) {
-      this.getCard();
+      cards.push(this.getCard());
     }
-
-    return this.deck;
+    return cards;
   }
  }
 
